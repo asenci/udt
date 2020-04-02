@@ -10,6 +10,6 @@ class Libudt < Formula
     system "make -e os=OSX arch=AMD64"
     lib.install "libudt.a"
     lib.install "libudt.dylib"
-    include.install "udt.h"
+    (include/"udt").install Dir["*.h"]
   end
 end
